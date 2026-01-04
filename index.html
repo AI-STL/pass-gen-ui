@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>STL AI – Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
+
+    <label>Master Key</label>
+    <input type="password" id="master" placeholder="Enter master key" />
+
+    <label>Context (site/app)</label>
+    <input type="text" id="context" placeholder="gmail.com" />
+
+    <label>Password Length</label>
+    <input type="number" id="length" value="16" min="8" max="64" />
+
+    <button onclick="generatePassword()">Generate</button>
+
+    <div id="result" class="hidden">
+      <p><strong>Password</strong></p>
+      <input type="text" id="password" readonly />
+      <button onclick="copyPassword()">Copy</button>
+    </div>
+
+    <p id="error" class="error"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
